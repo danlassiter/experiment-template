@@ -1,7 +1,7 @@
 Psychosemantics MTurk Template version 1.0, August 12, 2014
 
 Dan Lassiter, Psychosemantics Lab PI
-Department of Linguistics, Stanford University
+Department of Linguistics and CSLI, Stanford University
 http://web.stanford.edu/~danlass/
 Email: 'dan' followed by 'lassiter', then the ‘at’ sign, and finally 'stanford.edu'.
 
@@ -13,12 +13,12 @@ If you know some JavaScript but no JQuery, this great free interactive course at
 
 The Template’s sister tool, Submiterator, can be found at
 
-https://github.com/danlassiter/Submiterator/
+	https://github.com/danlassiter/Submiterator/
 
 For inspiration, or if you want to modify code instead of starting from scratch, here are a few examples of experiments that have been written and run using the Template-Submiterator-mmturkey workflow:
 
 	A simple text-based reasoning experiment (see Lassiter & Goodman 2012 in CogSci Proceedings): 
-		http://web.stanford.edu/~danlass/experiment/animals.html
+		http://web.stanford.edu/~danlass/experiment/animals/animals.html
 
 	An example making use of Raphael.js for graphics (see Nadathur & Lassiter forthcoming in Sinn und Bedeutung 2014 proceedings):
 		http://web.stanford.edu/~danlass/experiment/marbles/marbles.html
