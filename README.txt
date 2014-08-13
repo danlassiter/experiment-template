@@ -7,7 +7,7 @@ Email: 'dan' followed by 'lassiter', then the ‘at’ sign, and finally 'stanfo
 
 Summary:
 
-This is our template for writing experiments in HTML/JavaScript/CSS to post as external HITs on Amazon’s Mechanical Turk (MTurk). Together with Submiterator, it provides a full workflow for simple, flexible online surveys. It is not functional as-is: you have to know enough HTML and JavaScript to add content to it, using the hints provided in the comments. If you know the basics of these and a little bit about JQuery, you should be ready to go.  
+This is our template for writing experiments in HTML/JavaScript/CSS to post as external HITs on Amazon’s Mechanical Turk (MTurk). Together with Submiterator (https://github.com/danlassiter/Submiterator/) and mmturkey (https://github.com/longouyang/mmturkey), it provides a full workflow for simple, flexible online surveys. It is not functional as-is: you have to know enough HTML and JavaScript to add content to it, using the hints provided in the comments. If you know the basics of these and a little bit about JQuery, you should be ready to go.  
 
 If you know some JavaScript but no JQuery, this great free interactive course at CodeSchool (http://try.jquery.com/) will tell you what you need to know to get going and a bit more. For graphics, there are lots of options; I like Raphael.js, and have included in the HTML comments a few lines that can be used if you want to use this for graphics.
 
