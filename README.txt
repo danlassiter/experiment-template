@@ -20,13 +20,13 @@ For inspiration, or if you want to modify code instead of starting from scratch,
 	A simple text-based reasoning experiment (see Lassiter & Goodman 2012 in CogSci Proceedings): 
 		http://web.stanford.edu/~danlass/experiment/animals/animals.html
 
-	An example making use of Raphael.js for graphics (see Nadathur & Lassiter forthcoming in Sinn und Bedeutung 2014 proceedings):
+	An survey with a graphical component (see Nadathur & Lassiter forthcoming in Sinn und Bedeutung 2014 proceedings):
 		http://web.stanford.edu/~danlass/experiment/marbles/marbles.html
 
-If you have questions or comments on Submiterator and associated documentation, please contact me at the address at top of this file.
+If you have questions or comments on the template, please contact me at the address at top of this file.
 
 Happy experimenting!
 
 About us:
 
-The Psychosemantics Lab (PI: Dan Lassiter) is dedicated to exploring points of contact between formal semantics and pragmatics and cognitive science. It is located at Stanford’s Center for the Study of Language and Information and is affiliated with the Department of Linguistics.
+The Psychosemantics Lab (PI: Dan Lassiter) is dedicated to exploring meaning as a cognitive science problem, using behavioral experiments and modeling tools from formal linguistics, logic, and computational cognitive science. It is located at Stanford’s Center for the Study of Language and Information and is affiliated with the Department of Linguistics. It is in no way affiliated with the Jerry Fodor book, alt-rock group, or hypnosis technique of the same name.
