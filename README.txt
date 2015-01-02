@@ -17,11 +17,11 @@ The Template’s sister tool, Submiterator, can be found at
 
 For inspiration, or if you want to modify code instead of starting from scratch, here are a few examples of experiments that have been written and run using the Template-Submiterator-mmturkey workflow:
 
-A simple text-based reasoning experiment (see Lassiter & Goodman 2014 in <em>Cognition</em>): 
+A simple text-based reasoning experiment (see Lassiter & Goodman 2014 in Cognition): 
 	http://web.stanford.edu/~danlass/experiment/animals/animals.html
 	paper: http://web.stanford.edu/~danlass/Lassiter-Goodman-reasoning.pdf
 
-A survey with a graphical component (Nadathur & Lassiter in </em>Proceedings of Sinn und Bedeutung 2014</em>):
+A survey with a graphical component (Nadathur & Lassiter in Proceedings of Sinn und Bedeutung 2014):
 	http://web.stanford.edu/~danlass/experiment/marbles/marbles.html
 	paper: http://web.stanford.edu/~danlass/Nadathur-Lassiter-unless-SuB.pdf
 
