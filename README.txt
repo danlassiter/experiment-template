@@ -1,6 +1,6 @@
 Psychosemantics MTurk Template version 1.0, August 12, 2014
 
-Dan Lassiter, Psychosemantics Lab PI
+Dan Lassiter
 Department of Linguistics and CSLI, Stanford University
 http://web.stanford.edu/~danlass/
 Email: 'dan' followed by 'lassiter', then the ‘at’ sign, and finally 'stanford.edu'.
@@ -20,7 +20,7 @@ For inspiration, or if you want to modify code instead of starting from scratch,
 	A simple text-based reasoning experiment (see Lassiter & Goodman 2012 in CogSci Proceedings): 
 		http://web.stanford.edu/~danlass/experiment/animals/animals.html
 
-	An survey with a graphical component (see Nadathur & Lassiter forthcoming in Sinn und Bedeutung 2014 proceedings):
+	An survey with a graphical component (see <a href=“http://web.stanford.edu/~danlass/Nadathur-Lassiter-unless-SuB.pdf”>Nadathur & Lassiter, “Unless: An Experimental Approach”</a>, to appear in Sinn und Bedeutung 2014 proceedings):
 		http://web.stanford.edu/~danlass/experiment/marbles/marbles.html
 
 If you have questions or comments on the template, please contact me at the address at top of this file.
