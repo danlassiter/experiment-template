@@ -20,7 +20,7 @@ For inspiration, or if you want to modify code instead of starting from scratch,
 	A simple text-based reasoning experiment (see Lassiter & Goodman 2012 in CogSci Proceedings): 
 		http://web.stanford.edu/~danlass/experiment/animals/animals.html
 
-	An survey with a graphical component (Nadathur & Lassiter, “Unless: An Experimental Approach”, Proceedings of Sinn und Bedeutung 2014):
+	A survey with a graphical component (Nadathur & Lassiter, “Unless: An Experimental Approach”, Proceedings of Sinn und Bedeutung 2014):
 		experiment: http://web.stanford.edu/~danlass/experiment/marbles/marbles.html
 		paper: http://web.stanford.edu/~danlass/Nadathur-Lassiter-unless-SuB.pdf
 
