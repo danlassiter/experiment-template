@@ -9,7 +9,7 @@ Email: 'dan' followed by 'lassiter', then the ‘at’ sign, and finally 'stanfo
 
 INTRODUCTION
 
-This is our template for writing experiments in HTML/JavaScript/CSS. These can either be posted as external HITs on Amazon’s Mechanical Turk (MTurk), or (in a new feature added in August 2015) posted to another server that you specify. The latter change was made in response to recent changes at Amazon that have made MTurk more expensive and difficult to use if you are not in the US.
+This is our template for writing experiments in HTML/JavaScript/CSS. These can either be posted as external HITs on Amazon’s Mechanical Turk (MTurk), or (in a new, experimental feature added in August 2015) posted to another server that you specify. The latter change was made in response to recent changes at Amazon that have made MTurk more expensive and difficult to use if you are not in the US.
 
 It is not functional as-is: you have to know enough HTML and JavaScript to add content to it, using the hints provided in the comments. If you know the basics of these and a little bit about JQuery, you should be ready to go. The examples below may also be helpful.  
 
@@ -35,9 +35,51 @@ If you have a functioning experiment written in this style, it's easy to plug it
 
 USING TO POST DATA TO YOUR OWN SERVER
 
-In a new feature, this update includes a modified version of Long Ouyang's mmturkey to POST data to a server, and a tiny PHP script to process the data into a .csv file. If you have access to a server that can handle PHP, it's easy to create a (very) basic system for receiving and storing experimental data. 
+In a new feature, this update includes a modified version of Long Ouyang's mmturkey to POST data to a server, and a tiny PHP script to process the data into a .csv file. If you have access to a server that can handle PHP, it should be fairly easy to create a very basic system for receiving and storing experimental data. 
 
 This is particularly useful if you don't have access to MTurk (e.g., if you are not in the USA), or if you're studying a language whose users are not found on that platform in sufficient numbers. In such cases, you may wish to recruit participants via personal contacts or social media. This workflow allows you to design your survey/experiment in exactly the same way that you would if you were using MTurk, but deposit the data at a place of your choosing without using Amazon as an intermediary.
+
+(Note: This feature has not been extensively field-tested, so it may still be buggy. Please do let me know if you find issues.)
+
+In order to make your life easier, the PHP script included here will take appropriately formatted data and convert it directly into a "Tidy Data"-style .csv file that can be read into R. HOWEVER, in order to do this, the script makes some very strong assumptions about the data from your experiment is being recorded within your JavaScript code. Specifically, the data should be recorded as an object (i.e., dictionary/associative array) with
+
+    - all subject-level data recorded in ordinary key-value format, with informative key names
+    - each trial's data recorded as a separate object, with each data point given an informative key name
+
+So, for example, the following is a legal way to package your data to be passed to the server using the line 'turk.submit(data);'. Anything else will (probably) break the PHP.
+
+data = {
+    'nativeLanguage': 'Spanish',
+    'age': 35,
+    'comments': 'None. Great survey!'
+    'trial1': {
+        'rt': 8492,
+        'filler': 'no',
+        'condition': 'every',
+        'response': 'disagree',
+        ...
+    },
+    'trial2': {
+        'rt': 8492,
+        'filler': 'yes',
+        'condition': 'happy',
+        'response': 'NA',
+        ...
+    },
+    ...
+}
+
+Caveats: 
+    - the script will ignore the keys that you assign to individual trials. (So, don't rely on this to record trial order; add trial number in as a separate trial-level variable instead.) 
+    - make sure that ALL OF YOUR TRIALS record EXACTLY THE SAME VARIABLES. If it doesn't make sense to record some variable on a given trial, then record it as "NA".
+    - if you have free-responses as part of your experiment, you will have to ensure that they do not contain either of the following characters: colon (':') and comma (','). If they do, the PHP will be unable to parse your data correctly. Deal with this by removing/replacing these characters in your JavaScript. For example, suppose I have recorded the value of some text field in a variable 'comments'. It is very likely that some of my participants will use one or both of these characters. So, instead of recording it using something like 
+        > data['comments'] = comments;
+    I would record the result of replacing these characters with something safe, like
+        > comments = comments.replace(',', ' COMMA ')
+        > comments = comments.replace(':', ' COLON ')
+        > data['comments'] = comments;
+
+Step-by-step instructions for use (assuming you have a PHP server):
 
 Step 1: Copy the file "process.php" to an appropriate location on your server.
 Step 2: Find and record the URL that "process.php" now lives at. 
