@@ -1,3 +1,7 @@
+// var experimentName = "...";
+// var submitAddress = ".../process.php"; 
+	// uncomment these two lines and fill in appropriate values if you want to store your data at a server of your choosing, without going through MTurk.
+
 var numberOfQuestions = 10; 
 
 // or if you have a fixed stim set that all participants will see, use
@@ -48,16 +52,17 @@ function stepExperiment () {
 // if you're using a progress bar, uncomment next line to advance that
 // $('.bar').css('width', (200.0 * counter / numberOfQuestions) + 'px');	
     } else {
+// else, if it IS time to end the experiment, ...
     	showSlide("debrief");
 	    $("#lgerror").hide();
 	    $("#lgbox").keypress(function(e){ 
-// Important! This function captures return so that it doesn't restart experiment!
+// IMPORTANT: This function captures return so that it doesn't restart the experiment.
 	    	if (e.which == 13) {
 	    		return false;
 	    	}
 	    });
 	    $("#debriefSubmit").click(function(){
-// tailor this function to your debrief questions.
+// tailor this function, and corresponding HTML, to your debrief questions.
 			var lang = document.getElementById("lgbox").value;
 			if (lang.length > 5) {
 			    data.push(lang);
@@ -89,4 +94,6 @@ function random(a,b) {
     }
 }
 
-Array.prototype.random = function() { return this[random(this.length)]; }
+Array.prototype.random = function() { 
+	return this[random(this.length)]; 
+}
