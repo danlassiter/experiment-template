@@ -1,5 +1,5 @@
-Psychosemantics Web-Based Experimental Template
-    (Formerly "MTurk Experimental Template")
+Psychosemantics Web-Based Experiment Template
+    (Formerly "MTurk Experiment Template")
 Version 1.1, August 27, 2015
 
 Dan Lassiter
