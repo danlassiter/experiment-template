@@ -41,7 +41,7 @@ This is particularly useful if you don't have access to MTurk (e.g., if you are 
 
 (Note: This feature has not been extensively field-tested, so it may still be buggy. Please do let me know if you find issues.)
 
-In order to make your life easier, the PHP script included here will take appropriately formatted data and convert it directly into a "Tidy Data"-style .csv file that can be read into R. HOWEVER, in order to do this, the script makes some very strong assumptions about the data from your experiment is being recorded within your JavaScript code. Specifically, the data should be recorded as an object (i.e., dictionary/associative array) with
+In order to make your life easier, the PHP script included here will take appropriately formatted data and convert it directly into a "Tidy Data"-style .csv file that can be read into R. HOWEVER, in order to do this, the script makes some very strong assumptions about the way that your experimental data  is being recorded within your JavaScript. Specifically, the data should be recorded as an object (i.e., dictionary/associative array) with
 
     - all subject-level data recorded in ordinary key-value format, with informative key names
     - each trial's data recorded as a separate object, with each data point given an informative key name
